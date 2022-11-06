@@ -1,1 +1,22 @@
 
+create database Assignment1;
+use Assignment1 ; 
+
+
+create table order1
+(
+ord_no int ,
+purch_amt  varchar(20) , 
+ord_date  date ,
+customer_id int,
+salesman_id int 
+);
+
+
+1) select ord_date ,salesman_id,ord_no,  purch_amt , salesman_id from order1;
+
+
+2  )select *from salesperson where city = 'Paris' ;
+
+
+
