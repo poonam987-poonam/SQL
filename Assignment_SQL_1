@@ -106,3 +106,44 @@ insert into world values
 ======>           select name ,continent , count(name)  from world
                   where population >200000000
                   group by continent ;
+		  
+		  
+		  
+		  
+8)
+
+9)
+    Write an SQL query to find the ids of products that are both low fat and recyclable.
+    Return the result table in any order.
+    The query result format is in the following example.
+             ======> select product_id from productss 
+                       where low_fats = 'Y' and recyclable = 'Y'
+		       order by product_id  ;
+		       
+		       
+10) 
+
+1. Select the statement that shows the sum of population of all countries i
+
+ =======> select sum(population) as total_population from world ;
+ 
+2. Select the statement that shows the number of countries with population smaller
+than 150000
+
+ =======>select count(name) as number_of_countries from world where population  < 150000 ;
+ 
+ 
+3. Select the list of core SQL aggregate functions
+4. Select the result that would be obtained from the following code:
+
+5. Select the statement that shows the average population of 'Poland', 'Germany' and
+'Denmark'
+6. Select the statement that shows the medium population density of each region
+7. Select the statement that shows the name and population density of the country
+with the largest population
+
+
+
+
+
+
