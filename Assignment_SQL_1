@@ -41,5 +41,7 @@ insert into products values (101,'Motherboard' , 3200.00 , 15),
 
 select * from products where pro_price >= 550 order by pro_price desc , pro_name ;
 
-5)
+5)select * from order1 where (ord_date != '2012-09-10' and salesman_id > 5005 )  or purch_amt > 1000 ;
+
+6)
 
