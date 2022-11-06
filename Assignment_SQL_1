@@ -67,3 +67,18 @@ insert into world values
                  ('Dominica', 'Caribbean' ,  751 , 71293 , 499000000);
                  
 
+1. Write a query to fetch which country has the highest population?
+
+  =====> select *from world order by population desc limit 1;
+
+2.write a query to fetch the name of the country which has the least gdp?
+
+  =====> select *from world order by gdp  limit 1;
+  
+3. Write a query to fetch the name of the country which ends with letter C?
+4.write a query to fetch the name of the country which starts with letter D?
+5.write query to fetch which continent has highest gdp?
+6.Give the total GDP of Africa?
+7.write a query to fetch the total population for each continent?
+8. For each relevant continent show the number of countries that has a population of at least
+200000000?
