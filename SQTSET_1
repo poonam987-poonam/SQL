@@ -75,6 +75,18 @@ insert into city values (6 , 'Rotterdam' , 'NLD' ,  'Zuid-Holland' ,  593321),
 (266 , 'Cahone' , 'CO' , 116   , 127) ;
 
 
+select city from station ;
+select * from station ;
+select distinct city  from station where id %2 = 0 ;
+
+select (count(city) - count(distinct city)) as difference from station ;
+
+select city ,  length(city) as len  from station order by len desc , city  limit 1;
+select city ,  length(city) as len  from station order by len  , city  limit 1; 
+
+
+
+
  
   
  
