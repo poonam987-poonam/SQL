@@ -74,19 +74,93 @@ insert into city values (6 , 'Rotterdam' , 'NLD' ,  'Zuid-Holland' ,  593321),
 (971  ,'Graettinger' , 'IA' , 94 , 150) ,
 (266 , 'Cahone' , 'CO' , 116   , 127) ;
 
+7.
+select city   , state  from station ;
 
-select city from station ;
-select * from station ;
+
+
+8
 select distinct city  from station where id %2 = 0 ;
 
+9
 select (count(city) - count(distinct city)) as difference from station ;
 
+
+10
 select city ,  length(city) as len  from station order by len desc , city  limit 1;
 select city ,  length(city) as len  from station order by len  , city  limit 1; 
 
+11
+select distinct city from station where city like 'a%' or 
+city like 'e%'  or 
+city like 'i%' or 
+city like 'o%' or 
+ city like'u%' ;
+ 
+
+12
+select distinct city from station where city like '%a' or 
+ city like  '%e'  or 
+ city like '%i' or 
+ city like '%o' or 
+ city like '%u' ;
+ 
+ 13
+ select distinct city from station where city not like 'a%' or 
+city not like 'e%'  or 
+city not like 'i%' or 
+city  not like 'o%' or 
+ city  not like'u%' ;
+ 
+ 14
+ select distinct city from station where city not like '%a' or 
+ city not like  '%e'  or 
+ city  not like '%i' or 
+ city not like '%o' or 
+ city not like '%u' ;
+ 
+ 15
+ select distinct city from station where 
+( city  not like 'a%' or 
+city not like  'e%'  or 
+city not like  'i%' or 
+city not like  'o%' or 
+ city not like  'u%') 
+and
+( city not like '%a' or 
+  city not like  '%e'  or 
+ city not like '%i' or 
+ city not like '%o' or 
+ city  not like '%u')  ; 
 
 
+16 ..
 
+
+Q17 
+
+create table product (
+product_id int ,
+product_name varchar(30) ,
+unit_price int , 
+primary key (product_id)
+);
+
+create table sales (
+seller_id int ,
+product_id int ,
+buyer_id int ,
+sale_date date ,
+quantity int ,
+price int ,
+foreign key(product_id) references product(product_id)
+);
+
+
+select product_id ,product_name ,unit_price from product 
+where product_id in (select product_id from sales where sale_date  between '2019-01-01' and '2019-03-31' )  ; 
+ 
+ 
  
   
  
