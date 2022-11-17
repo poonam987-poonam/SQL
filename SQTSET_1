@@ -156,12 +156,17 @@ price int ,
 foreign key(product_id) references product(product_id)
 );
 
-
+17
 select product_id ,product_name ,unit_price from product 
 where product_id in (select product_id from sales where sale_date  between '2019-01-01' and '2019-03-31' )  ; 
+
  
- 
- 
+ 18
+ select distinct v1.author_id as id from views v1
+inner join 
+views v2 
+ON v1.author_id = v2.viewer_id
+order by id ; 
   
  
 
