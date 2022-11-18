@@ -168,5 +168,28 @@ views v2
 ON v1.author_id = v2.viewer_id
 order by id ; 
   
- 
+ 19 ---> Pending
+ select  from delivery where  delivery_id  = 
+(select distinct d1.delivery_id as id  , 
+d1.order_date , 
+d1.customer_pref_delivery_date from delivery d1
+inner join
+delivery d2
+on d1.order_date = d2.customer_pref_delivery_date );
+
+
+20  ======> Pending
+
+
+
+
+
+21 -----===> 
+SELECT employee_id, COUNT(team_id) OVER (PARTITION BY team_id) team_size
+FROM Employee
+
+22 ====>
+
+
+
 
