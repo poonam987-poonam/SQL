@@ -277,3 +277,12 @@ group by n.`year` , n.id ;
 31 
 ===> pending
 
+32 
+===>
+select  u.unique_id , e.name  from Employees e
+left join EmployeeUNI  u
+on e.id = u.id 
+order by unique_id asc ;
+
+
+33
