@@ -266,4 +266,9 @@ on t.content_id = c.content_id
 where t.program_date between '2020-06-01' and  '2020-06-30' ;
 
 
-
+30 ===> half completed
+select n.id , n.`year` , n.npv from NPV n
+join
+Queries q
+on n.id = q.id 
+group by n.`year` , n.id ;
