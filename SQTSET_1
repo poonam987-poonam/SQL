@@ -285,4 +285,15 @@ on e.id = u.id
 order by unique_id asc ;
 
 
-33
+33 
+===>
+select u.name , sum(r.distance) as travelled_distance from Users1 u 
+left join
+Rides r
+on u.id = r.user_id
+group by u.name
+order by travelled_distance desc 
+
+
+
+
