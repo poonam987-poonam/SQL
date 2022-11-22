@@ -272,3 +272,8 @@ join
 Queries q
 on n.id = q.id 
 group by n.`year` , n.id ;
+
+
+31 
+===> pending
+
