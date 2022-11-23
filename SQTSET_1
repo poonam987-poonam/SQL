@@ -329,6 +329,16 @@ select name as result from
 
 
 36.
+select u.name as name , sum(r.distance) as travelled_distance from Users1 u 
+left join
+Rides r
+on u.id = r.user_id
+group by u.name
+order by travelled_distance desc , name  ;
+
+
+37 
+====>
 
 
 
