@@ -359,6 +359,16 @@ select en.unique_id , e.name from employees e
 pending
 
 
+41
+====>
+select w.name , sum(w.units*p.vol) as volume  from Warehouse w
+join 
+(select product_id , (Width*Length*Height) as vol from Products) p
+on w.product_id = p.product_id
+group by w.name 
 
+
+42
+===>
 
 
