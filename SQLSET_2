@@ -18,3 +18,23 @@ insert into world values( 'Afghanistan' , 'Asia' , 652230 , 25500100 , 203430000
 
 select name , population , area from world
 where population > 25000000 and area < 3000000
+
+
+
+52 ====>
+create table Customer(
+id int ,
+name varchar(30),
+referee_id int  ,
+primary key (id)
+);
+
+insert into Customer values (1 , 'Will' , null),
+(2 , 'Jane' , null),
+(3 , 'Alex' , 2) ,
+(4 , 'Bill' , null),
+(5 , 'Zack' , 1),
+(6 , 'Mark' , 2)
+
+select name from Customer where id not in(
+ select id  from Customer where referee_id = 2);
