@@ -87,3 +87,11 @@ insert into  Employee values (1 , 8),
 select employee_id , 
 count(team_id) over(partition by team_id) as team_size 
 from Employee
+
+
+55 
+===> understaning issue in question
+
+56
+====>
+
