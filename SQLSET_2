@@ -150,4 +150,25 @@ pending
 
 
 60
-.
+create table Triangle (
+x int ,
+y int ,
+z int, 
+primary key(x ,y ,z)
+ );
+ 
+ insert into Triangle values (13 ,15 , 30),
+( 10 , 20 , 15) 
+
+
+select x, y ,z  ,
+ case 
+   when x+y < z or x+z < y or y+z < x then 'Yes'
+   else 'NO'
+end as 'triangle'
+from Triangle
+
+
+61
+====>
+
