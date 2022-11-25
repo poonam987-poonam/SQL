@@ -208,6 +208,39 @@ select actor_id , director_id from ActorDirector
 group by actor_id , director_id
 having count(*) >= 3 ;
 
+63
+
+create table Sales(
+sale_id int ,
+product_id int ,
+`year` int ,
+quantity int ,
+price int ,
+primary key(sale_id ,`year`)
+);
+
+insert into  sales values (1 , 100 , 2008 , 10 , 5000),
+(2 , 100 , 2009 , 12 , 5000),
+(7 , 200 , 2011 , 15 , 9000) 
+
+
+create table Product(
+product_id int ,
+product_name varchar(30) ,
+primary key(product_id)
+);
+
+insert into Product values(100 , 'Nokia'),
+(200 , 'Apple'),
+(300  ,'Samsung');
+
+select p.product_name , s.`year` ,  s.price from Product p
+inner join Sales s
+on s.product_id = p.product_id
+
+
+64
+==>
 
 
 
