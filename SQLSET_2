@@ -272,4 +272,17 @@ on e.employee_id = p.employee_id
 group by project_id
 
 
+65 
+======>
+Select a.seller_id
+from
+(select seller_id, 
+rank() over(order by sum(price) desc) as rk
+from sales
+group by seller_id) a
+where a.rk=1
+
+
+66
+=======>
 
