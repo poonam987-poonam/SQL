@@ -171,4 +171,23 @@ from Triangle
 
 61
 ====>
+create table Points (
+x int ,
+primary key(x)
+);
+
+insert into Points values (-1),
+(0),
+(2)
+
+select (abs(p1.x - p2.x)) shorest  from  Points p1
+join Points p2
+on p1.x <> p2.x
+
+
+
+
+62 
+===>
+
 
