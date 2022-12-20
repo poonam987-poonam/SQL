@@ -1,0 +1,13 @@
+Q 101
+Pending
+Still confusion
+
+Q102
+Pending
+Still confusion
+
+
+Q103
+select `Name` from STUDENTS 
+             where Marks > 75
+             order by right(`Name` , 3) asc ;
