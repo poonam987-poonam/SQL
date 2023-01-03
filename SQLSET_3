@@ -30,7 +30,10 @@ select `Name` from STUDENTS
 
 
 Q104
-select name from Employee
-where salary > 2000 and months < 10 ; 
+select name from Employee 
+order by name
+
 
 Q105
+select name from Employee
+where salary > 2000 and months < 10 ; 
