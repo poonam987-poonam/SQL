@@ -27,3 +27,10 @@ Q103
 select `Name` from STUDENTS 
              where Marks > 75
              order by right(`Name` , 3) asc ;
+
+
+Q104
+select name from Employee
+where salary > 2000 and months < 10 ; 
+
+Q105
