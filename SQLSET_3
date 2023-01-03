@@ -1,6 +1,22 @@
 Q 101
-Pending
-Still confusion
+
+select username , activity , startdate, enddate from
+(select u.*,
+rank() over (partition by username order by startdate) as rnk ,
+count(username) over (partition by username) as num
+from  UserActivity u) t
+where (num <> 1 and rnk = 2) or (num = 1 and rnk = 1)
+
+
+select * from UserActivity
+    where (username , startdate) in (
+      select username ,max(startdate) from UserActivity 
+         where (username , startdate ) not in (
+		   select  username , max(startdate)
+                from UserActivity
+                  group by username 
+                    having count(username) > 1 )
+		   group by username );
 
 Q102
 Pending
